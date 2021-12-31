@@ -51,7 +51,7 @@ public class Home extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         hargaCappucino = new javax.swing.JTextField();
         hargaAmericano = new javax.swing.JTextField();
-        hargaEspresso = new javax.swing.JTextField();
+        hargaespresso = new javax.swing.JTextField();
         hargaLatte = new javax.swing.JTextField();
         jumlahCappucino = new javax.swing.JTextField();
         jumlahAmericano = new javax.swing.JTextField();
@@ -65,7 +65,9 @@ public class Home extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         totalfull = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        bayar = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        diskon = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -167,11 +169,11 @@ public class Home extends javax.swing.JFrame {
         hargaAmericano.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         hargaAmericano.setText("0");
 
-        hargaEspresso.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        hargaEspresso.setText("0");
-        hargaEspresso.addActionListener(new java.awt.event.ActionListener() {
+        hargaespresso.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        hargaespresso.setText("0");
+        hargaespresso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hargaEspressoActionPerformed(evt);
+                hargaespressoActionPerformed(evt);
             }
         });
 
@@ -203,6 +205,11 @@ public class Home extends javax.swing.JFrame {
         totalLatte.setText("0");
 
         checkout.setText("CHECK OUT");
+        checkout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkoutActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Total");
 
@@ -211,72 +218,83 @@ public class Home extends javax.swing.JFrame {
 
         jLabel7.setText("Total Bayar");
 
-        jTextField13.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField13.setText("0");
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        bayar.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        bayar.setText("0");
+        bayar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                bayarActionPerformed(evt);
             }
         });
+
+        jLabel8.setText("Diskon");
+
+        diskon.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        diskon.setText("0");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addGap(105, 105, 105)
-                        .addComponent(jLabel1)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addGap(105, 105, 105)
+                                .addComponent(jLabel1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel6)
+                                .addGap(32, 32, 32)))
                         .addGap(81, 81, 81))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cbLatte, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbEspresso, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbAmericano, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbCappucino, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(hargaCappucino, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(hargaAmericano, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(hargaEspresso, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                                    .addComponent(hargaLatte))))
-                        .addGap(45, 45, 45)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jumlahAmericano, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                            .addComponent(jumlahCappucino)
-                            .addComponent(jumlahEspresso)
-                            .addComponent(jumlahLatte))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
-                        .addGap(81, 81, 81)))
+                                .addGap(20, 20, 20)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(cbLatte, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbEspresso, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbAmericano, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbCappucino, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(hargaCappucino, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(hargaAmericano, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(83, 83, 83)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(hargaespresso, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                                            .addComponent(hargaLatte))))
+                                .addGap(45, 45, 45)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jumlahAmericano, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                                    .addComponent(jumlahCappucino)
+                                    .addComponent(jumlahEspresso)
+                                    .addComponent(jumlahLatte)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(234, 234, 234)
+                                .addComponent(checkout)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel7))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5)
-                    .addComponent(totalEspresso)
+                    .addComponent(totalEspresso, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                     .addComponent(totalLatte)
                     .addComponent(totalCappucino)
                     .addComponent(totalAmericano)
                     .addComponent(totalfull)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
+                    .addComponent(bayar)
+                    .addComponent(diskon))
                 .addGap(62, 62, 62))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(250, 250, 250)
-                .addComponent(checkout)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,7 +320,7 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbEspresso)
-                    .addComponent(hargaEspresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hargaespresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jumlahEspresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(totalEspresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -311,17 +329,24 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(hargaLatte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jumlahLatte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(totalLatte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(totalfull, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkout)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(checkout))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(diskon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(bayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Menu");
@@ -369,23 +394,23 @@ public class Home extends javax.swing.JFrame {
     private void cbEspressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEspressoActionPerformed
         // TODO add your handling code here:
              if (cbEspresso.isSelected()){
-            hargaEspresso.setEnabled(true);
+            hargaespresso.setEnabled(true);
             jumlahEspresso.setEnabled(true);           
             totalEspresso.setEnabled(true);
         }else{
-            hargaEspresso.setEnabled(false);
+            hargaespresso.setEnabled(false);
             jumlahEspresso.setEnabled(false);
             totalEspresso.setEnabled(false);
 
     }//GEN-LAST:event_cbEspressoActionPerformed
 
-    private void hargaEspressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaEspressoActionPerformed
+    private void hargaespressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaespressoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_hargaEspressoActionPerformed
-
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_hargaespressoActionPerformed
+         
+    private void bayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bayarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_bayarActionPerformed
 
     private void cbCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCappucinoActionPerformed
         // TODO add your handling code here:
@@ -422,9 +447,48 @@ public class Home extends javax.swing.JFrame {
         }else{
             hargaLatte.setEnabled(false);
             jumlahLatte.setEnabled(false);
-            totalLatte.setEnabled(false);
+            totalLatte .setEnabled(false);
 
     }//GEN-LAST:event_cbLatteActionPerformed
+
+    private void checkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutActionPerformed
+        // TODO add your handling code here:
+            int harga = Integer.parseInt(hargaCappucino.getText());
+        int jumlah = Integer.parseInt(jumlahCappucino.getText());
+        totalCappucino.setText(Integer.toString(jumlah * harga)); //Menghitung subTotal harga ikan
+        
+        int harga1 = Integer.parseInt(hargaAmericano.getText());
+        int jumlah1= Integer.parseInt(jumlahAmericano.getText());
+        totalAmericano.setText(Integer.toString(harga1 * jumlah1));//menghitung subTotal harga ayam
+        
+        int harga2 = Integer.parseInt(hargaespresso.getText());
+        int jumlah2 = Integer.parseInt(jumlahEspresso.getText());
+        totalEspresso.setText(Integer.toString(harga2 * jumlah2)); //Menghitung subTotal harga ayam krispi
+        
+        int harga3 = Integer.parseInt(hargaLatte.getText());
+        int jumlah3 = Integer.parseInt(jumlahLatte.getText());
+        totalLatte.setText(Integer.toString(harga3 * jumlah3)); //Menghitung subTotal harga ayam bakar
+        
+        // Menghitung harga total, diskon dan total bayar
+        int Total1 = Integer.parseInt(totalCappucino.getText());
+        int Total2 = Integer.parseInt(totalAmericano.getText());
+        int Total3 = Integer.parseInt(totalEspresso.getText());
+        int Total4 = Integer.parseInt(totalLatte.getText());
+        int Full = Total1 + Total2 + Total3 + Total4;
+        totalfull.setText("Rp." + Full + ",00");
+        if (Full > 250000){
+            diskon.setText("20%");
+            Full = Full-(Full * 20/100);
+            bayar.setText("Rp." + Full + ",00");
+        }else if (Full > 150000){
+            diskon.setText("10%");
+            Full = Full-(Full*10/100);
+            bayar.setText("Rp." + Full + ",00");
+        }else{
+            bayar.setText("Rp."+Full+",00");
+        }
+
+    }//GEN-LAST:event_checkoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -462,15 +526,17 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField bayar;
     private javax.swing.JCheckBox cbAmericano;
     private javax.swing.JCheckBox cbCappucino;
     private javax.swing.JCheckBox cbEspresso;
     private javax.swing.JCheckBox cbLatte;
     private javax.swing.JButton checkout;
+    private javax.swing.JTextField diskon;
     private javax.swing.JTextField hargaAmericano;
     private javax.swing.JTextField hargaCappucino;
-    private javax.swing.JTextField hargaEspresso;
     private javax.swing.JTextField hargaLatte;
+    private javax.swing.JTextField hargaespresso;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -481,12 +547,12 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jumlahAmericano;
     private javax.swing.JTextField jumlahCappucino;
     private javax.swing.JTextField jumlahEspresso;
