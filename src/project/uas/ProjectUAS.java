@@ -15,7 +15,9 @@ public class ProjectUAS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        Login lv = new Login();
+        lv.setLocationRelativeTo(null);
+        lv.setVisible(true);
     }
     
 }

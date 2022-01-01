@@ -144,23 +144,23 @@ public class Home extends javax.swing.JFrame {
         });
 
         cbAmericano.setText("Americano");
-        cbAmericano.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbAmericanoActionPerformed(evt);
+        cbAmericano.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                cbAmericanoStateChanged(evt);
             }
         });
 
         cbCappucino.setText("Cappucino");
-        cbCappucino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCappucinoActionPerformed(evt);
+        cbCappucino.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                cbCappucinoStateChanged(evt);
             }
         });
 
         cbLatte.setText("Latte");
-        cbLatte.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbLatteActionPerformed(evt);
+        cbLatte.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                cbLatteStateChanged(evt);
             }
         });
 
@@ -176,11 +176,6 @@ public class Home extends javax.swing.JFrame {
 
         hargaespresso.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         hargaespresso.setText("0");
-        hargaespresso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hargaespressoActionPerformed(evt);
-            }
-        });
 
         hargaLatte.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         hargaLatte.setText("0");
@@ -210,9 +205,9 @@ public class Home extends javax.swing.JFrame {
         totalLatte.setText("0");
 
         checkout.setText("CHECK OUT");
-        checkout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkoutActionPerformed(evt);
+        checkout.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                checkoutStateChanged(evt);
             }
         });
 
@@ -225,11 +220,6 @@ public class Home extends javax.swing.JFrame {
 
         bayar.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         bayar.setText("0");
-        bayar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bayarActionPerformed(evt);
-            }
-        });
 
         jLabel8.setText("Diskon");
 
@@ -412,22 +402,26 @@ public class Home extends javax.swing.JFrame {
             hargaespresso.setEnabled(false);
             jumlahEspresso.setEnabled(false);
             totalEspresso.setEnabled(false);
+             }
 
     }//GEN-LAST:event_cbEspressoActionPerformed
-
-    private void hargaespressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaespressoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hargaespressoActionPerformed
          
-    private void bayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bayarActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_bayarActionPerformed
+        int input = JOptionPane.showConfirmDialog(null,"Apakah anda yakin ingin Logout?","Konfirmasi", JOptionPane.YES_NO_OPTION);
+       // 0 = yes, 1 = no, 2 = cancel
+       
+       if (input == 0){
+           Login lv = new Login();
+           lv.setLocationRelativeTo(null);
+           lv.setVisible(true);
+           this.setVisible(false);
+       }
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void cbCappucinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCappucinoActionPerformed
+    private void cbCappucinoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_cbCappucinoStateChanged
         // TODO add your handling code here:
-             if (cbCappucino.isSelected()){
+        if (cbCappucino.isSelected()){
             hargaCappucino.setEnabled(true);
             jumlahCappucino.setEnabled(true);           
             totalCappucino.setEnabled(true);
@@ -435,12 +429,12 @@ public class Home extends javax.swing.JFrame {
             hargaCappucino.setEnabled(false);
             jumlahCappucino.setEnabled(false);
             totalCappucino.setEnabled(false);
+        }
+    }//GEN-LAST:event_cbCappucinoStateChanged
 
-    }//GEN-LAST:event_cbCappucinoActionPerformed
-
-    private void cbAmericanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAmericanoActionPerformed
+    private void cbAmericanoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_cbAmericanoStateChanged
         // TODO add your handling code here:
-             if (cbAmericano.isSelected()){
+        if (cbAmericano.isSelected()){
             hargaAmericano.setEnabled(true);
             jumlahAmericano.setEnabled(true);           
             totalAmericano.setEnabled(true);
@@ -448,23 +442,10 @@ public class Home extends javax.swing.JFrame {
             hargaAmericano.setEnabled(false);
             jumlahAmericano.setEnabled(false);
             totalAmericano.setEnabled(false);
+        }
+    }//GEN-LAST:event_cbAmericanoStateChanged
 
-    }//GEN-LAST:event_cbAmericanoActionPerformed
-
-    private void cbLatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLatteActionPerformed
-        // TODO add your handling code here:
-             if (cbLatte.isSelected()){
-            hargaLatte.setEnabled(true);
-            jumlahLatte.setEnabled(true);           
-            totalLatte.setEnabled(true);
-        }else{
-            hargaLatte.setEnabled(false);
-            jumlahLatte.setEnabled(false);
-            totalLatte .setEnabled(false);
-
-    }//GEN-LAST:event_cbLatteActionPerformed
-
-    private void checkoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutActionPerformed
+    private void checkoutStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_checkoutStateChanged
         // TODO add your handling code here:
         int harga = Integer.parseInt(hargaCappucino.getText());
         int jumlah = Integer.parseInt(jumlahCappucino.getText());
@@ -500,21 +481,20 @@ public class Home extends javax.swing.JFrame {
         }else{
             bayar.setText("Rp."+total+",00");
         }
+    }//GEN-LAST:event_checkoutStateChanged
 
-    }//GEN-LAST:event_checkoutActionPerformed
-
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+    private void cbLatteStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_cbLatteStateChanged
         // TODO add your handling code here:
-        int input = JOptionPane.showConfirmDialog(null,"Apakah anda yakin ingin Logout?","Konfirmasi", JOptionPane.YES_NO_OPTION);
-       // 0 = yes, 1 = no, 2 = cancel
-       
-       if (input == 0){
-           Login lv = new Login();
-           lv.setLocationRelativeTo(null);
-           lv.setVisible(true);
-           this.setVisible(false);
-       }
-    }//GEN-LAST:event_btnLogoutActionPerformed
+        if (cbLatte.isSelected()){
+            hargaLatte.setEnabled(true);
+            jumlahLatte.setEnabled(true);           
+            totalLatte.setEnabled(true);
+        }else{
+            hargaLatte.setEnabled(false);
+            jumlahLatte.setEnabled(false);
+            totalLatte .setEnabled(false);
+        }
+    }//GEN-LAST:event_cbLatteStateChanged
 
     /**
      * @param args the command line arguments
